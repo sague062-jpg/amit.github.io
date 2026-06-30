@@ -1,0 +1,34 @@
+<!DOCTYPE html><html lang='en'><head><meta charset='UTF-8'><meta name='viewport' content='width=device-width,initial-scale=1'>
+<title>Dear Rita Poudel Didu ❤️</title>
+<style>
+*{box-sizing:border-box}body{margin:0;overflow:hidden;height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#fbc2eb,#a18cd1);background-size:400% 400%;animation:bg 12s ease infinite;font-family:Arial}
+@keyframes bg{0%{background-position:0 50%}50%{background-position:100% 50%}100%{background-position:0 50%}}
+.card{background:rgba(255,255,255,.9);padding:30px;border-radius:20px;max-width:700px;width:90%;text-align:center;z-index:5;box-shadow:0 10px 30px rgba(0,0,0,.2)}
+h1{color:#e91e63}#msg{min-height:140px;white-space:pre-wrap;color:#444}button{padding:12px 24px;border:none;border-radius:25px;background:#e91e63;color:#fff;font-size:18px;cursor:pointer}
+.float{position:fixed;bottom:-30px;animation:rise linear forwards}.spark{position:fixed;top:-20px;animation:fall linear forwards}
+@keyframes rise{to{transform:translateY(-120vh) rotate(360deg);opacity:0}}
+@keyframes fall{to{transform:translateY(120vh);opacity:0}}
+#count{margin:15px;font-weight:bold;color:#c2185b}
+</style></head><body>
+<div class='card'>
+<h1>Dear Rita Poudel Didu ❤️</h1>
+<div id='count'></div>
+<p id='msg'></p>
+<button onclick="alert('Thank you for reading, Didu. ❤️ I hope you forgive me someday.')">Forgive Me ❤️</button>
+<p style='margin-top:20px'>Made with love by your brother 💖</p>
+</div>
+<script>
+const text=`I'm truly sorry for hurting you.
+
+You are an amazing sister, and I regret my mistakes.
+Thank you for always caring for me.
+I hope one day you'll forgive me.
+
+❤️ I'm sincerely sorry, Didu. ❤️`;
+let i=0;function type(){if(i<text.length){msg.textContent+=text[i++];setTimeout(type,35)}};type();
+let s=Date.now();setInterval(()=>{let d=Math.floor((Date.now()-s)/1000);count.textContent="Waiting for your forgiveness: "+d+" seconds ❤️";},1000);
+function mk(ch,cls,dur){let e=document.createElement('div');e.className=cls;e.textContent=ch;e.style.left=Math.random()*100+'vw';e.style.fontSize=(16+Math.random()*20)+'px';e.style.animationDuration=dur+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),dur*1000);}
+setInterval(()=>mk('❤️','float',5+Math.random()*4),250);
+setInterval(()=>mk('🌸','float',6+Math.random()*4),400);
+setInterval(()=>mk('✨','spark',3+Math.random()*3),180);
+</script></body></html>
